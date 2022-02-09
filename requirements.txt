@@ -1,0 +1,7 @@
+robotframework-seleniumlibrary==5.0.0
+robotframework-debuglibrary==2.2.2
+robotframework-faker==5.0.0
+robotframework-pabot==2.0.1
+pyyaml==5.4.1
+robotframework==4.1
+
