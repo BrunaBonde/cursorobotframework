@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Aqui estarão presentes todos os testes automatizados do módulo de automação web
+Documentation    Aqui estarão presentes todos os testes automatizados do módulo de automação web com robot
 
 Resource         ../../src/config/package.robot
 
@@ -49,7 +49,7 @@ Cenario: Criar usuário com sucesso
     Wait Until Page Contains    ${NOVO_USUARIO.genero}
     Wait Until Page Contains    ${NOVO_USUARIO.idade}
 
-    Sleep    2
+    Sleep    3
     
 Cenario: Criar usuário com sucesso usando BDD
     [Tags]    BDD
@@ -59,13 +59,13 @@ Cenario: Criar usuário com sucesso usando BDD
     Então deve ser apresentada a mensagem "Usuário Criado com sucesso"
 
 Cenario: Criar usuário sem informar o nome
-    [Tags]    bug
+    [Tags]    erro
     Dado que o cliente esteja na tela de cadastro
     E preencheu todos os campos exceto o campo nome  
     Quando clicar em Criar
     Então deve ser apresentada a mensagem        Name translation missing: pt-BR.activerecord.errors.models.user.attributes.name.blank
 Cenario: Criar usuário sem informar o email
-    [Tags]    bug
+    [Tags]    erro
     Dado que o cliente esteja na tela de cadastro
     E preencheu todos os campos exceto o campo email  
     Quando clicar em Criar
